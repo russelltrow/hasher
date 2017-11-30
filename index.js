@@ -1,4 +1,4 @@
-import pathToRegexp from 'path-to-regexp';
+var pathToRegexp = require('path-to-regexp');
 
 const defaultOptions = {
     sensitive: false,
@@ -8,7 +8,7 @@ const defaultOptions = {
 
 let running = false;
 
-export default function hasher(path, ...args) {
+function hasher(path, ...args) {
     if (!path) {
         return hasher.start();
     }
